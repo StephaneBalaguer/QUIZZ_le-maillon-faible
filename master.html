@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Super Socket temps réel !</title>
+</head>
+
+<body>
+
+
+  
+
+    <br /> <br /><table style="text-align:center;">
+        <tr><td><button onclick="plus()">&nbsp;plus&nbsp;</button></td></tr>
+        <tr><td><button onclick="moins()">&nbsp;moins&nbsp;</button></td></tr> 
+        <tr><td><button onclick="banque()">&nbsp;banque&nbsp;</button></td></tr> 
+        <tr><td><button onclick="suivant()">&nbsp;manche suivante&nbsp;</button></td></tr> 
+        <tr><td><button onclick="echec()">&nbsp;Echec&nbsp;</button></td></tr> 
+        <tr><td><button onclick="start()">&nbsp;Start Manche&nbsp;</button></td></tr> 
+      
+        </table>
+
+
+
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+
+        var socket = io.connect("127.0.0.1:8080");
+        function plus(){
+            socket.emit('action', 'plus');
+        }
+        function moins(){
+            socket.emit('action', 'moins');
+        }
+        function banque(){
+            socket.emit('action', 'banque');
+        } 
+        function suivant(){
+            socket.emit('action', 'suivant');
+        }
+        function echec(){
+            socket.emit('action', 'echec');
+        }
+        function start(){
+            socket.emit('action', 'start');
+        }
+        </script>
+
+    </body>
+
+    </html>

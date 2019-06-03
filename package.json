@@ -1,0 +1,14 @@
+{
+  "name": "lemaillonfaible",
+  "version": "0.1.0",
+  "dependencies": {
+    "ent": "^0.1.0",
+    "express": "^3.3.8",
+    "http": "0.0.0",
+    "buzz-buzzers": "^1.0.3",
+    "ip": "^1.1.5",
+    "socket.io": "^1.2.1"
+  },
+  "author": "Stéphane Balaguer <st.balaguer@gmail.com>",
+  "description": "Un super Chat temps réel avec socket.io"
+}
